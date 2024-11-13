@@ -1,0 +1,139 @@
+.card-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  padding: 50px 0;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--on-background);
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.card-link {
+  display: block;
+  padding: 20px;
+  background-color: var(--on-background);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.card-link:hover,
+.card-link:hover .card-date {
+  text-decoration: none;
+  color: #fff;
+}
+
+.card-link:hover .card-active-bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.card-title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+
+  z-index: 2;
+  position: relative;
+}
+
+.card-bottom {
+  font-size: 18px;
+  color: #fff;
+
+  z-index: 2;
+  position: relative;
+}
+
+.card-date {
+  font-weight: bold;
+  color: #f9b234;
+
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.card-active-bg {
+  height: 128px;
+  width: 128px;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.card:nth-child(2n) .card-active-bg {
+  background-color: #3ecd5e;
+}
+.card:nth-child(3n) .card-active-bg {
+  background-color: #e44002;
+}
+.card:nth-child(4n) .card-active-bg {
+  background-color: #952aff;
+}
+.card:nth-child(5n) .card-active-bg {
+  background-color: #cd3e94;
+}
+.card:nth-child(6n) .card-active-bg {
+  background-color: #4c49ea;
+}
+
+@media only screen and (max-width: 979px) {
+  .card {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .card-title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .card {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .card-title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .card-link {
+    padding: 22px 40px;
+  }
+  .card-bottom {
+    font-size: 16px;
+  }
+}

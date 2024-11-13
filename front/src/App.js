@@ -1,12 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import LandingPage from "./pages/LandingPage.tsx";
+import HomePage from "./pages/HomePage/HomePage.tsx";
+import LoginAndRegister from "./pages/LoginAndRegister.tsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/loginAndRegister" element={<LoginAndRegister />}></Route>
       </Routes>
     </BrowserRouter>
   );
