@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import HomeIcons from "../../../assets/icons/home.svg";
+import homeIcon from "../../../assets/icons/home.svg";
 
 const Sidebar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
-    <nav className="sidebar">
+    <nav className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
       <header>
         <div className="image-text">
           <span className="image">
@@ -15,16 +21,19 @@ const Sidebar = () => {
             />
           </span>
 
-          <div className="text logo-text">
-            <span className="name">Marija</span>
-            <span className="profession">Developer</span>
-          </div>
+          {!isCollapsed && (
+            <div className="text logo-text">
+              <span className="name">Marija</span>
+              <span className="profession">Developer</span>
+            </div>
+          )}
         </div>
 
         <img
           className="toggle"
           alt="Toggle"
-          src="../../../assets/images/profile-photo.png"
+          src={homeIcon}
+          onClick={toggleSidebar}
         />
       </header>
 
@@ -33,65 +42,43 @@ const Sidebar = () => {
           <ul className="menu-links">
             <li className="nav-link">
               <Link to="/">
-                <img alt="Home" className="icon" src={HomeIcons} />
-                <span className="text nav-text">Home</span>
+                <img alt="Home" className="icon" src={homeIcon} />
+                {!isCollapsed && <span className="text nav-text">Home</span>}
               </Link>
             </li>
             <li className="nav-link">
               <Link to="/">
-                <img
-                  alt="Model history"
-                  className="icon"
-                  src="../../../assets/icons/home.svg"
-                />
-                <span className="text nav-text">Model history</span>
-              </Link>
-            </li>
-
-            <li className="nav-link">
-              <Link to="/">
-                <img
-                  alt="Data history"
-                  className="icon"
-                  src="../../../../../assets/icons/data.svg"
-                />
-                <span className="text nav-text">Data history</span>
+                <img alt="Model history" className="icon" src={homeIcon} />
+                {!isCollapsed && (
+                  <span className="text nav-text">Model history</span>
+                )}
               </Link>
             </li>
 
             <li className="nav-link">
               <Link to="/">
-                <img
-                  alt="Shared dataset"
-                  className="icon"
-                  src="../../../../../assets/icons/fileChart.svg"
-                />
-                <span className="text nav-text">Shared Datasets</span>
+                <img alt="Data history" className="icon" src={homeIcon} />
+                {!isCollapsed && (
+                  <span className="text nav-text">Data history</span>
+                )}
               </Link>
             </li>
 
             <li className="nav-link">
               <Link to="/">
-                <img
-                  alt="Shared models"
-                  className="icon"
-                  src="../../../../../assets/icons/data.svg"
-                />
-                <span className="text nav-text">Shared Models</span>
+                <img alt="Shared dataset" className="icon" src={homeIcon} />
+                {!isCollapsed && (
+                  <span className="text nav-text">Shared Datasets</span>
+                )}
               </Link>
             </li>
 
             <li className="nav-link">
               <Link to="/">
-                <i className="pi pi-address-book"></i>
-                <span className="text nav-text">Community</span>
-              </Link>
-            </li>
-
-            <li className="nav-link">
-              <Link to="/">
-                <i className="pi pi-question"></i>
-                <span className="text nav-text">Q&A</span>
+                <img alt="Shared models" className="icon" src={homeIcon} />
+                {!isCollapsed && (
+                  <span className="text nav-text">Shared Models</span>
+                )}
               </Link>
             </li>
           </ul>
@@ -100,12 +87,8 @@ const Sidebar = () => {
         <div className="bottom-content">
           <li className="">
             <Link to="/">
-              <img
-                className="icon"
-                src="../../../../../assets/icons/logout.svg"
-                alt=""
-              />
-              <span className="text nav-text">Logout</span>
+              <img className="icon" src={homeIcon} alt="" />
+              {!isCollapsed && <span className="text nav-text">Logout</span>}
             </Link>
           </li>
           <br />

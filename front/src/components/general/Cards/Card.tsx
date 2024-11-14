@@ -1,9 +1,9 @@
 import React from "react";
-import "./Cards.css";
+import "./Card.css";
 import { Link } from "react-router-dom";
 import { CardsProps } from "./models/CardProps";
 
-const Cards = ({ title, description, color }: CardsProps) => {
+const Card = ({ title, description, color }: CardsProps) => {
   return (
     <div className="card-container">
       <div className="card">
@@ -22,4 +22,4 @@ const Cards = ({ title, description, color }: CardsProps) => {
   );
 };
 
-export default Cards;
+export default Card;

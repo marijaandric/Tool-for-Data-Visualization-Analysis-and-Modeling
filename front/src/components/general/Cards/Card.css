@@ -24,9 +24,7 @@
   display: block;
   padding: 20px;
   background-color: var(--on-background);
-
   overflow: hidden;
-
   position: relative;
 }
 
@@ -43,13 +41,13 @@
 }
 
 .card-title {
-  min-height: 87px;
+  min-height: 3rem;
   margin: 0 0 25px;
 
   overflow: hidden;
 
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: #fff;
 
   z-index: 2;
