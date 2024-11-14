@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import homeIcon from "../../../assets/icons/home.svg";
+import logo from "../../../assets/images/logo-first-part.png";
+import logoSecondPart from "../../../assets/images/logo-second-part.png";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -15,16 +17,16 @@ const Sidebar = () => {
       <header>
         <div className="image-text">
           <span className="image">
-            <img
-              alt="Profile pic"
-              src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm01MTMtZi0wMTQtZC1sMWsxa3NkZC5qcGc.jpg"
-            />
+            <img alt="Logo" src={logo} />
           </span>
 
           {!isCollapsed && (
-            <div className="text logo-text">
-              <span className="name">Marija</span>
-              <span className="profession">Developer</span>
+            <div>
+              <img
+                alt="Logo"
+                className="logo-second-part"
+                src={logoSecondPart}
+              />
             </div>
           )}
         </div>
