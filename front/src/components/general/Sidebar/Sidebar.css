@@ -1,5 +1,4 @@
 nav {
-  min-height: 100vh;
   background-color: var(--body-color);
   transition: var(--tran-05);
 }
@@ -9,7 +8,6 @@ nav {
 }
 
 .sidebar {
-  height: 100%;
   width: 250px;
   padding: 10px 14px;
   background: var(--on-background);
@@ -17,6 +15,7 @@ nav {
   z-index: 10;
   transition: width 0.5s;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .logo-second-part {
@@ -25,6 +24,7 @@ nav {
 
 .sidebar .menu-bar {
   overflow-y: auto;
+  text-decoration: none;
 }
 
 .sidebar.collapsed {
@@ -184,7 +184,6 @@ body.dark .sidebar header .toggle {
   height: 100%;
   width: 100%;
   border-radius: 6px;
-  text-decoration: none;
   transition: var(--tran-03);
 }
 
@@ -272,6 +271,7 @@ body.dark .switch::before {
   left: 20px;
 }
 .menu-links {
+  text-decoration: none;
   padding-left: 0px;
 }
 

@@ -1,10 +1,15 @@
-import React from "react";
 import "./Navbar.css";
+import useAppInfo from "../../../globalInfo/AppInfo.tsx";
 
 const Navbar = () => {
+  const { randomWelcomeMessage } = useAppInfo();
+
   return (
     <div className="navbar-content">
-      <h1>Title</h1>
+      <div className="flex-col">
+        <h1>Home</h1>
+        <p className="subtitle">{randomWelcomeMessage}</p>
+      </div>
       <div>
         <p>Name Lastname</p>
       </div>

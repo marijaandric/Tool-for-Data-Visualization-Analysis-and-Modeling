@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import homeIcon from "../../../assets/icons/home.svg";
+import modelIcon from "../../../assets/icons/models.svg";
+import dataIcon from "../../../assets/icons/data.svg";
+import logoutIcon from "../../../assets/icons/logout.svg";
+import arrowLeftIcon from "../../../assets/icons/arrowLeft.svg";
+
 import logo from "../../../assets/images/logo-first-part.png";
 import logoSecondPart from "../../../assets/images/logo-second-part.png";
 
@@ -34,7 +39,7 @@ const Sidebar = () => {
         <img
           className="toggle"
           alt="Toggle"
-          src={homeIcon}
+          src={arrowLeftIcon}
           onClick={toggleSidebar}
         />
       </header>
@@ -43,14 +48,14 @@ const Sidebar = () => {
         <div className="menu">
           <ul className="menu-links">
             <li className="nav-link">
-              <Link to="/">
+              <Link to="/" className="link">
                 <img alt="Home" className="icon" src={homeIcon} />
                 {!isCollapsed && <span className="text nav-text">Home</span>}
               </Link>
             </li>
             <li className="nav-link">
-              <Link to="/">
-                <img alt="Model history" className="icon" src={homeIcon} />
+              <Link to="/" className="link">
+                <img alt="Models" className="icon" src={modelIcon} />
                 {!isCollapsed && (
                   <span className="text nav-text">Model history</span>
                 )}
@@ -58,28 +63,10 @@ const Sidebar = () => {
             </li>
 
             <li className="nav-link">
-              <Link to="/">
-                <img alt="Data history" className="icon" src={homeIcon} />
+              <Link to="/" className="link">
+                <img alt="Data" className="icon" src={dataIcon} />
                 {!isCollapsed && (
                   <span className="text nav-text">Data history</span>
-                )}
-              </Link>
-            </li>
-
-            <li className="nav-link">
-              <Link to="/">
-                <img alt="Shared dataset" className="icon" src={homeIcon} />
-                {!isCollapsed && (
-                  <span className="text nav-text">Shared Datasets</span>
-                )}
-              </Link>
-            </li>
-
-            <li className="nav-link">
-              <Link to="/">
-                <img alt="Shared models" className="icon" src={homeIcon} />
-                {!isCollapsed && (
-                  <span className="text nav-text">Shared Models</span>
                 )}
               </Link>
             </li>
@@ -88,8 +75,8 @@ const Sidebar = () => {
 
         <div className="bottom-content">
           <li className="">
-            <Link to="/">
-              <img className="icon" src={homeIcon} alt="" />
+            <Link to="/" className="link">
+              <img className="icon" src={logoutIcon} alt="" />
               {!isCollapsed && <span className="text nav-text">Logout</span>}
             </Link>
           </li>
