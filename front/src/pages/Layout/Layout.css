@@ -24,3 +24,9 @@
   top: 0;
   left: 0;
 }
+
+.containerForChat {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
