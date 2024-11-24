@@ -1,13 +1,12 @@
 .cardWithImage {
   height: fit;
-  width: 100%;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--default-box-shadow);
   background-color: var(--on-background);
   text-align: center;
-  margin: 20px auto;
-  padding: 10px;
+  margin-bottom: var(--default-margin);
+  padding: var(--card-padding);
 }
 
 .cardWithImage-image {
@@ -25,10 +24,13 @@
 
 .cardWithImage-description {
   font-size: 1rem;
-  padding: 0 15px 15px;
   display: -webkit-box;
   height: fit-content;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.bottomContent {
+  padding-top: 1rem;
 }

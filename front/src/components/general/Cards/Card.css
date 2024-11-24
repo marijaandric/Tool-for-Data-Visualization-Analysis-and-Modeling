@@ -9,14 +9,16 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  padding: 20px 0 50px;
+  padding-top: var(--default-padding);
 }
 
 .card {
   box-shadow: var(--default-box-shadow);
   width: 100%;
   background-color: var(--on-background);
-  margin: 0 15px 30px;
+  margin: 0;
+  margin-right: var(--default-margin);
+  margin-bottom: var(--default-margin);
   overflow: hidden;
   border-radius: 28px;
 }

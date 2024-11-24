@@ -9,12 +9,19 @@
   --secondary-color: #1aede6;
   --secondary-color-darker: #6579db;
   --default-box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.1);
+  --default-margin: 1.5rem;
+  --default-padding: 0.2rem;
+  --card-padding: 1rem;
 }
 
 body {
   background: var(--primary-background);
   color: var(--text-color);
   font-family: "Montserrat", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .App {
@@ -31,11 +38,22 @@ body {
   flex-direction: column;
 }
 
+.justify-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .link {
   text-decoration: none;
 }
 
 .firstPart,
 .secondPart {
+  margin-top: var(--default-margin);
   width: 50%;
+}
+
+.secondPart {
+  margin-left: var(--default-margin);
 }
