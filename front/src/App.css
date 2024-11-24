@@ -34,3 +34,8 @@ body {
 .link {
   text-decoration: none;
 }
+
+.firstPart,
+.secondPart {
+  width: 50%;
+}

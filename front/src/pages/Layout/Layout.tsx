@@ -7,13 +7,13 @@ import Navbar from "../../components/general/Navbar/Navbar.tsx";
 const Layout = () => {
   return (
     <div className="app-layout">
-      <div className="content-wrapper">
+      <div className="sidebar-layout">
         <Sidebar />
+      </div>
+      <div className="content-wrapper">
         <div className="main-content">
           <Navbar />
-          <main>
-            <Outlet />
-          </main>
+          <Outlet />
         </div>
       </div>
     </div>

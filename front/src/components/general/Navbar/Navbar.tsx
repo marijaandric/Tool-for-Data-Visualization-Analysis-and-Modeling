@@ -11,6 +11,7 @@ const Navbar = () => {
         <p className="subtitle">{randomWelcomeMessage}</p>
       </div>
       <div>
+        <p>Notifications</p>
         <p>Name Lastname</p>
       </div>
     </div>

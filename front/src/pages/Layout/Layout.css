@@ -1,6 +1,7 @@
 .app-layout {
-  height: 100vh;
+  height: 100%;
   display: flex;
+  position: relative;
 }
 
 .content-wrapper {
@@ -11,5 +12,14 @@
 
 .main-content {
   width: 100%;
+  height: 100%;
   transition: margin-left 0.5s, width 0.5s;
+}
+
+.sidebar-layout {
+  display: initial;
+  height: 100vh;
+  position: sticky !important;
+  top: 0;
+  left: 0;
 }
