@@ -30,7 +30,6 @@ const LoginAndRegister = () => {
           </form>
         </div>
 
-        {/* Sign-In Form */}
         <div className="form-container sign-in-container">
           <form action="#">
             <h1>Sign in</h1>
@@ -42,7 +41,6 @@ const LoginAndRegister = () => {
           </form>
         </div>
 
-        {/* Overlay Container */}
         <div className="overlay-container">
           <div className="overlay">
             <div className="overlay-panel overlay-left">

@@ -45,13 +45,12 @@ input {
 
 .containerLoginAndRegister {
   background-color: var(--on-background);
-  border-radius: 10px;
   box-shadow: var(--default-box-shadow);
   position: relative;
-  overflow: hidden;
   width: 55rem;
   max-width: 100%;
   min-height: 480px;
+  border-radius: var(--default-border-radius);
 }
 
 .form-container {
@@ -67,10 +66,6 @@ input {
   z-index: 2;
 }
 
-.containerLoginAndRegister.right-panel-active .sign-in-container {
-  transform: translateX(100%);
-}
-
 .sign-up-container {
   left: 0;
   width: 50%;
@@ -78,7 +73,7 @@ input {
   z-index: 1;
 }
 
-.containerLoginAndRegister.right-panel-active .sign-up-container {
+.sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -108,9 +103,11 @@ input {
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
+  border-radius: 0 var(--default-border-radius) var(--default-border-radius) 0;
 }
 
 .containerLoginAndRegister.right-panel-active .overlay-container {
+  border-radius: var(--default-border-radius) 0 0 var(--default-border-radius);
   transform: translateX(-100%);
 }
 
@@ -146,7 +143,6 @@ input {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
   text-align: center;
   top: 0;
   height: 100%;
